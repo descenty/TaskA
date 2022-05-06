@@ -8,8 +8,7 @@ import traceback
 
 
 def bus(bus_stops):
-    # Тело функции
-    return 0
+    return sum(x[0] - x[1] for x in bus_stops)
 
 
 # Тесты

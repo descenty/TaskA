@@ -9,13 +9,13 @@ import traceback
 
 
 def highest_rank(arr):
-    dict = {}
+    values_dict = {}
     for i in arr:
-        if i not in dict:
-            dict[i] = 1
+        if i not in values_dict:
+            values_dict[i] = 1
         else:
-            dict[i] += 1
-    values = sorted(dict.items(), key=lambda x: x[1], reverse=True)
+            values_dict[i] += 1
+    values = sorted(values_dict.items(), key=lambda x: x[1], reverse=True)
     max_value = max([x[1] for x in values])
     return max([x[0] for x in values if x[1] == max_value])
 
